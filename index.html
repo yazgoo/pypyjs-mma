@@ -1,6 +1,5 @@
-<!-- shim for ES6 `Promise` builtin -->
+<!--
 <script src="./lib/Promise.min.js" type="text/javascript"></script>
-<!-- shim for off-main-thread function compilation -->
 <script src="./lib/FunctionPromise.js" type="text/javascript"></script>
 <script src="./lib/pypyjs.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -17,4 +16,14 @@
   }).then(function() {
     return pypyjs.exec('print("done")');
   })
+</script>
+-->
+<script>
+var worker = new Worker("worker.js")
+worker.postMessage(["a"]);
+console.log('Message posted to worker');
+worker.onmessage = function(e) {
+  console.log('Message received from worker');
+  console.log(btoa(e.data));
+}
 </script>
