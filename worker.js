@@ -4,7 +4,12 @@ pypyjs.ready().then(function() {
 })
 onmessage = function(e) {
   console.log('Message received from main script');
-  pypyjs.execfile('mma.py').catch(function(e) {
+  console.log(e.data[0]);
+  pypyjs.ready().then(function() {
+    return pypyjs.set('song', e.data[0])
+  }).then(function(e) {
+    return pypyjs.execfile('mma.py')
+  }).catch(function(e) {
       console.log(e);
       console.log(e.trace);
   }).then(function() {
