@@ -25,7 +25,7 @@ sys.modules['__main__'] = main
 sys.modules['_pwdgrp_cffi'] = main
 print("test2")
 import MMA.main
-mma_run()
+MMA.main.mma_run()
 #list_dir(".")
 f = open("in.mid", 'r')
 import base64
