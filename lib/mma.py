@@ -25,7 +25,7 @@ sys.modules['__main__'] = main
 sys.modules['_pwdgrp_cffi'] = main
 print("test2")
 import MMA.main
-list_dir(".")
+#list_dir(".")
 f = open("in.mid", 'r')
 import base64
 midi = base64.b64encode(f.read())
