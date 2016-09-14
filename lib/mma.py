@@ -12,7 +12,7 @@ def list_dir(d):
             list_dir(full_path)
         else:
             print(full_path)
-list_dir(".")
+#list_dir(".")
 print("===== song ======")
 print(song)
 f = open('in.mma','w')
