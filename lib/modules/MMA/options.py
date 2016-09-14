@@ -270,8 +270,8 @@ def opts(l=None):
     if len(args) > 1:
         usage("Only one input filename is permitted, %s given on command line." % len(args))
 
-    if gbl.infile:
-        usage("Input filename already assigned ... should not happen.")
+#    if gbl.infile:
+#        usage("Input filename already assigned ... should not happen.")
 
     if args:
         gbl.infile = args[0]
