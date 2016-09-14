@@ -24,17 +24,8 @@ main = Main()
 sys.modules['__main__'] = main
 sys.modules['_pwdgrp_cffi'] = main
 print("test2")
-import MMA
-def importOrReload(module_name, *names):
-    import sys
-    if module_name in sys.modules:
-        reload(sys.modules[module_name])
-    else:
-        __import__(module_name, fromlist=names)
-    for name in names:
-        globals()[name] = getattr(sys.modules[module_name], name)
-
-importOrReload("MMA.main")
+if 'MMA.main' in sys.modules: del sys.modules["MMA.main"]
+import MMA.main
 #list_dir(".")
 f = open("in.mid", 'r')
 import base64
