@@ -22,25 +22,25 @@ Bob van der Poel <bob@mellowood.ca>
 
 """
 
-import os
-
-import MMA.midi
-import MMA.midifuncs
-import MMA.parse
-import MMA.file
-import MMA.options
-import MMA.auto
-import MMA.docs
-import MMA.tempo
-
-from . import gbl
-from MMA.common import *
-from MMA.lyric import lyric
-import MMA.paths
-
-cmdSMF = None
-
 def mma_run():
+    import os
+
+    import MMA.midi
+    import MMA.midifuncs
+    import MMA.parse
+    import MMA.file
+    import MMA.options
+    import MMA.auto
+    import MMA.docs
+    import MMA.tempo
+
+    from . import gbl
+    from MMA.common import *
+    from MMA.lyric import lyric
+    import MMA.paths
+
+    cmdSMF = None
+
     ########################################
     ########################################
 
