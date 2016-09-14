@@ -39,6 +39,8 @@ def mma_run():
     from MMA.lyric import lyric
     import MMA.paths
 
+    gbl.infile = None
+
     cmdSMF = None
 
     ########################################
