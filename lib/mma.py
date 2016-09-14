@@ -24,8 +24,8 @@ main = Main()
 sys.modules['__main__'] = main
 sys.modules['_pwdgrp_cffi'] = main
 print("test2")
-if 'MMA.main' in sys.modules: del sys.modules["MMA.main"]
 import MMA.main
+mma_run()
 #list_dir(".")
 f = open("in.mid", 'r')
 import base64
