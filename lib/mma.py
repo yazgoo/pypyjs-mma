@@ -24,6 +24,7 @@ main = Main()
 sys.modules['__main__'] = main
 sys.modules['_pwdgrp_cffi'] = main
 print("test2")
+import MMA
 def importOrReload(module_name, *names):
     import sys
     if module_name in sys.modules:
