@@ -40,6 +40,10 @@ def mma_run():
     import MMA.paths
 
     cmdSMF = None
+    print(gbl.mtrks)
+    for key in gbl.mtrks.keys():
+        gbl.mtrks[key] = MMA.midi.Mtrk(key) 
+    gbl.tickOffset = 0;
 
     ########################################
     ########################################

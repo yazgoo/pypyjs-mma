@@ -2112,12 +2112,12 @@ class PC:
 
         else:
             gbl.mtrks[self.channel].addPairToTrack(
-                offset + self.delay[sc],
-                self.rTime[sc][0], self.rTime[sc][1],
-                duration,
-                note,
-                velocity,
-                self.unify[sc])
+                    offset + self.delay[sc],
+                    self.rTime[sc][0], self.rTime[sc][1],
+                    duration,
+                    note,
+                    velocity,
+                    self.unify[sc])
 
     def sendChord(self, chord, duration, offset):
         """ Send a chord to midi with strum delay. Called

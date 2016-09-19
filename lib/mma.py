@@ -14,6 +14,7 @@ def list_dir(d):
             print(full_path)
 #list_dir(".")
 print("===== song ======")
+if os.path.exists("in.mid"): os.unlink("in.mid")
 print(song)
 f = open('in.mma','w')
 f.write(str(song))
@@ -25,6 +26,7 @@ sys.modules['__main__'] = main
 sys.modules['_pwdgrp_cffi'] = main
 print("test2")
 import MMA.main
+reload(MMA)
 MMA.main.mma_run()
 #list_dir(".")
 f = open("in.mid", 'r')
